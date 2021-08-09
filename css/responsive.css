@@ -6,9 +6,12 @@
 }
 @media (max-width: 1520px){
     .shap_mobile {
-        padding-left: 80px;
+        padding-left: 20px;
         width: 38%;
         padding-top: 60px;
+        padding-right: 30px;
+        text-align: center;
+        justify-content: center;
     }
     .text_3d {
         width: 62%;
@@ -85,6 +88,9 @@
     }
     .main_slider_area .rev_slider .tp-revslider-mainul li .slider_text_box .single_img {
         display: none;
+    }
+    .main_slider_area{
+        height: 430px;
     }
 }
 @media (max-width: 991px){

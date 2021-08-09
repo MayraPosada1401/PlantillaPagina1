@@ -391,6 +391,7 @@ i:before {
 .main_slider_area {
   background: url(../img/home-slider/slider-bg-1.png) no-repeat scroll center center;
   background-size: cover;
+  height: 700px;
 }
 
 .main_slider_area .rev_slider .tp-revslider-mainul li .slider_text_box .first_text {
@@ -580,6 +581,7 @@ i:before {
   min-height: 91px;
   position: relative;
 }
+
 
 .feature_item .f_icon img {
   position: absolute;
@@ -1249,10 +1251,16 @@ i:before {
 }
 
 .shap_mobile {
-  padding-top: 85px;
+  padding-top: 115px;
   float: right;
   width: 46%;
-  padding-left: 130px;
+  padding-left: 100px;
+  padding-right: 30px;
+  margin-top: 50px;
+}
+
+.we_company_area{
+  margin-top: -90px;
 }
 
 /* End Best 3d Area css
@@ -1662,7 +1670,7 @@ i:before {
 /* Circle Chart Area css
 ============================================================================================ */
 .circle_chart_area {
-  padding: 85px 0px 80px 0px;
+  padding: 85px 0px 85px 0px;
 }
 
 .circle_progress .circle_progress_inner {
@@ -1686,6 +1694,7 @@ i:before {
   font-weight: 500;
   color: #0b1033;
   margin-top: -13px;
+  justify-content: center;
 }
 
 .circle_progress .circle_progress_inner h4 {
@@ -1941,7 +1950,7 @@ i:before {
 }
 
 .r_widget {
-  margin-bottom: 80px;
+  margin-bottom: 10px;
 }
 
 .r_widget:last-child {
@@ -1949,7 +1958,14 @@ i:before {
 }
 
 .r_w_title {
-  padding-bottom: 25px;
+  padding-bottom: 5px;
+  margin-left: 80px;
+  margin-right: 20px ;
+}
+
+.centrartituloppiif3{
+  padding-left: 60px;
+  padding-right: 20px ;
 }
 
 .r_w_title h3 {
@@ -2088,6 +2104,7 @@ i:before {
   margin-right: -8px;
   margin-bottom: -12px;
 }
+
 
 .tag_widget ul li {
   display: inline-block;
