@@ -917,7 +917,7 @@ i:before {
 /* Service Solution Area css
 ============================================================================================ */
 .service_solution_area {
-  background: url(../img/service-bg.jpg) no-repeat fixed center right;
+  background: url(../img/fondofiif.jpeg) no-repeat fixed center right;
   background-size: cover;
   position: relative;
   z-index: 3;
@@ -1959,12 +1959,12 @@ i:before {
 
 .r_w_title {
   padding-bottom: 5px;
-  margin-left: 80px;
+  margin-left: 85px;
   margin-right: 20px ;
 }
 
 .centrartituloppiif3{
-  padding-left: 60px;
+  padding-left: 70px;
   padding-right: 20px ;
 }
 
