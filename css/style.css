@@ -690,10 +690,12 @@ i:before {
 
 .team_people_text ul {
   padding-left: 20px;
+  color: #7c8d93;
 }
 
 .team_people_text ul li {
   width: calc(100% / 2);
+  color: #7c8d93;
   float: left;
   margin-bottom: 15px;
 }
@@ -2320,7 +2322,15 @@ i:before {
   padding-bottom: 55px;
 }
 
-.f_about_widget p {
+.f_about_widget p{
+  font-size: 15px;
+  line-height: 28px;
+  color: #fff;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+}
+
+.letra_footer{
   font-size: 15px;
   line-height: 28px;
   color: #fff;

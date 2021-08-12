@@ -76,6 +76,7 @@
         width: calc(100% / 1);
         float: none;
         margin-bottom: 15px;
+        
     }
     .team_people_text ul li:nth-child(2n) {
         padding-left: 0px;
