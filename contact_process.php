@@ -1,22 +1,22 @@
 <?php
-$name = $_POST['name'];
-$email = $_POST['email'];
-$message = $_POST['message'];
+$para = 'mayra.v.posada.a@gmail.com';
 
-$header = 'From: ' . $mail . " \r\n";
-$header .= "X-Mailer: PHP/" . phpversion() . " \r\n";
-$header .= "Mime-Version: 1.0 \r\n";
-$header .= "Content-Type: text/plain";
+$nombre = $_POST['nombre'];
+$correo = $_POST['correo'];
+$mensaje = $_POST['mensaje'];
 
-$mensaje = "Este mensaje fue enviado por " . $name . ",\r\n";
-$mensaje .= "Su e-mail es: " . $email . " \r\n";
+$header = 'From: ' . $correo . " \r\n";
+
+$mensaje = "Este mensaje fue enviado por " . $nombre . ",\r\n";
+$mensaje .= "Su e-mail es: " . $correo . " \r\n";
 $mensaje .= "Mensaje: " . $_POST['message'] . " \r\n";
 $mensaje .= "Enviado el " . date('d/m/Y', time());
 
-$para = 'mayra.v.posada.a@gmail.com';
+
 $asunto = 'Mensaje de mi sitio web';
 
 mail($para, $asunto, utf8_decode($mensaje), $header);
+echo "<script>alert('Correo enviado exitosamente')</script>"
+echo "<script>setTimeout(\"location.href='acerca.html'\",1000)</script>"
 
-header("Location:acerca.html");
 ?>
