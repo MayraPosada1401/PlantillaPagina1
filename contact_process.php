@@ -1,22 +1,30 @@
 <?php
-$para = 'mayra.v.posada.a@gmail.com';
 
-$nombre = $_POST['nombre'];
-$correo = $_POST['correo'];
-$mensaje = $_POST['mensaje'];
+    $to = "mayra.v.posada.a@gmail.com";
+    $from = $_REQUEST['correo'];
+    $name = $_REQUEST['nombre'];
+    $cmessage = $_REQUEST['mensaje'];
 
-$header = 'From: ' . $correo . " \r\n";
+    $headers = "From: $from";
+	$headers = "From: " . $from . "\r\n";
+	$headers .= "Reply-To: ". $from . "\r\n";
+	$headers .= "MIME-Version: 1.0\r\n";
+	$headers .= "Content-Type: text/html; charset=ISO-8859-1\r\n";
 
-$mensaje = "Este mensaje fue enviado por " . $nombre . ",\r\n";
-$mensaje .= "Su e-mail es: " . $correo . " \r\n";
-$mensaje .= "Mensaje: " . $_POST['message'] . " \r\n";
-$mensaje .= "Enviado el " . date('d/m/Y', time());
+    $subject = "Tienes un nuevo mensaje.";
 
+	$body = "<!DOCTYPE html><html lang='en'><head><meta charset='UTF-8'><title>Express Mail</title></head><body>";
+	$body .= "<table style='width: 100%;'>";
+	$body .= "<thead style='text-align: center;'><tr><td style='border:none;' colspan='2'>";
+	$body .= "</td></tr></thead><tbody><tr>";
+	$body .= "<td style='border:none;'><strong>Name:</strong> {$name}</td>";
+	$body .= "<td style='border:none;'><strong>Email:</strong> {$from}</td>";
+	$body .= "</tr>";
+	$body .= "<tr><td></td></tr>";
+	$body .= "<tr><td colspan='2' style='border:none;'>{$cmessage}</td></tr>";
+	$body .= "</tbody></table>";
+	$body .= "</body></html>";
 
-$asunto = 'Mensaje de mi sitio web';
-
-mail($para, $asunto, utf8_decode($mensaje), $header);
-echo "<script>alert('Correo enviado exitosamente')</script>"
-echo "<script>setTimeout(\"location.href='acerca.html'\",1000)</script>"
+    $send = mail($to, $subject, $body, $headers);
 
 ?>
