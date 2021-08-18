@@ -1,36 +1,22 @@
 <?php
+$name = $_POST['name'];
+$email = $_POST['email'];
+$message = $_POST['message'];
 
-    $to = "mayra.v.posada.a@gmail.com";
-    $from = $_REQUEST['email'];
-    $name = $_REQUEST['name'];
-    $subject = $_REQUEST['subject'];
-    $cmessage = $_REQUEST['message'];
+$header = 'From: ' . $mail . " \r\n";
+$header .= "X-Mailer: PHP/" . phpversion() . " \r\n";
+$header .= "Mime-Version: 1.0 \r\n";
+$header .= "Content-Type: text/plain";
 
-    $headers = "From: $from";
-	$headers = "From: " . $from . "\r\n";
-	$headers .= "Reply-To: ". $from . "\r\n";
-	$headers .= "MIME-Version: 1.0\r\n";
-	$headers .= "Content-Type: text/html; charset=ISO-8859-1\r\n";
+$mensaje = "Este mensaje fue enviado por " . $name . ",\r\n";
+$mensaje .= "Su e-mail es: " . $email . " \r\n";
+$mensaje .= "Mensaje: " . $_POST['message'] . " \r\n";
+$mensaje .= "Enviado el " . date('d/m/Y', time());
 
-    $subject = "You have a message from your Sierra.";
+$para = 'mayra.v.posada.a@gmail.com';
+$asunto = 'Mensaje de mi sitio web';
 
-    $logo = '#';
-    $link = '#';
+mail($para, $asunto, utf8_decode($mensaje), $header);
 
-	$body = "<!DOCTYPE html><html lang='en'><head><meta charset='UTF-8'><title>Express Mail</title></head><body>";
-	$body .= "<table style='width: 100%;'>";
-	$body .= "<thead style='text-align: center;'><tr><td style='border:none;' colspan='2'>";
-	$body .= "<a href='{$link}'><img src='{$logo}' alt=''></a><br><br>";
-	$body .= "</td></tr></thead><tbody><tr>";
-	$body .= "<td style='border:none;'><strong>Name:</strong> {$name}</td>";
-	$body .= "<td style='border:none;'><strong>Email:</strong> {$from}</td>";
-	$body .= "</tr>";
-	$body .= "<tr><td style='border:none;'><strong>Subject:</strong> {$csubject}</td></tr>";
-	$body .= "<tr><td></td></tr>";
-	$body .= "<tr><td colspan='2' style='border:none;'>{$cmessage}</td></tr>";
-	$body .= "</tbody></table>";
-	$body .= "</body></html>";
-
-    $send = mail($to, $subject, $body, $headers);
-
+header("Location:acerca.html");
 ?>
