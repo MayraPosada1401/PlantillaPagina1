@@ -1,9 +1,9 @@
 <?php
 
     $to = "mayra.v.posada.a@gmail.com";
-    $from = $_REQUEST['correo'];
-    $name = $_REQUEST['nombre'];
-    $cmessage = $_REQUEST['mensaje'];
+    $from = $_POST['correo'];
+    $name = $_POST['nombre'];
+    $cmessage = $_POST['mensaje'];
 
     $headers = "From: $from";
 	$headers = "From: " . $from . "\r\n";
