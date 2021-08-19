@@ -478,7 +478,7 @@ i:before {
 .testimonials_slider:before {
   content: "";
   background: url(../img/3d-shap.png) no-repeat scroll center center;
-  height: 600px;
+  height: 700px;
   max-width: 524px;
   width: 100%;
   position: absolute;
@@ -694,44 +694,8 @@ i:before {
 }
 
 .team_people_text ul li {
-  width: calc(100% / 2);
   color: #7c8d93;
-  float: left;
   margin-bottom: 15px;
-}
-
-.team_people_text ul li a {
-  padding-left: 18px;
-  font-family: "Roboto", sans-serif;
-  color: #7c8d93;
-  font-size: 15px;
-  line-height: 28px;
-  font-weight: 500;
-  position: relative;
-  -webkit-transition: all 400ms linear 0s;
-  -o-transition: all 400ms linear 0s;
-  transition: all 400ms linear 0s;
-}
-
-.team_people_text ul li a:before {
-  content: "";
-  height: 5px;
-  width: 5px;
-  border-radius: 50%;
-  background: #a6d7ff;
-  position: absolute;
-  left: 0px;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
-  -webkit-transition: all 400ms linear 0s;
-  -o-transition: all 400ms linear 0s;
-  transition: all 400ms linear 0s;
-}
-
-.team_people_text ul li:nth-child(even) {
-  padding-left: 22px;
 }
 
 .team_people_text ul li:last-child {
